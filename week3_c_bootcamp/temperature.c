@@ -9,6 +9,15 @@ float fahr_to_celsius (float f_temp)
     return c_temp;
 }
 
+float fahr_to_newt (float f_temp)
+{
+    float c_temp;
+    //converting temp to celcius
+    c_temp = (f_temp - 32) * 11/60;
+    return c_temp;
+}
+
+
 float fahr_to_kelvin (float f_temp)
 {
     float k_temp;
@@ -28,6 +37,7 @@ int main ()
     printf ("\n");
     printf ("Select A to convert to Celsius\n");
     printf ("Select B to convert to Kelvin\n");
+    printf ("Select C to convert to Newt\n");
     printf ("Select Q to quit\n");
 
     scanf(" %c", &option);
@@ -37,14 +47,19 @@ int main ()
     {
         //each case calls the related function 
         case 'A': printf ("Converted to degrees Celsius: %f\n", fahr_to_celsius(fahrenheit));
-                  break;
+            break;
 
         case 'B': printf ("Converted to Kelvin: %f\n", fahr_to_kelvin(fahrenheit));
-                  break;
+            break;
 
-        case 'Q': break;
+        case 'C': printf("Converted to Newton Temp Scale: %f\n", fahr_to_newt(fahrenheit));
+            break;
 
-        default:  break;
+        case 'Q': 
+            break;
+
+        default:  
+            break;
     }
 
     return 0;
