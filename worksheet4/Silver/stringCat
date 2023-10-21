@@ -24,7 +24,7 @@ int stringLength(char inputString[]) {
     return total;
 }
 
-char concatStrings(char string1[], char string2[]) {
+int concatStrings(char string1[], char string2[]) {
 
     int length1 = stringLength(string1);
     int length2 = stringLength(string2);
@@ -41,10 +41,13 @@ char concatStrings(char string1[], char string2[]) {
 
     for (counter1 = 0; counter1 < length2; counter1++) {
         newString[index] = string2[counter1];
+        index++;
     }
 
     for (count = 0; count < totalLength; count ++) {
         printf("%c", newString[count]);
     }
+
+    return 0;
 }
 
