@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-int stringLength(char string[]);
-char concatStrings(string1, string2);
+
+char concatStrings(char string1[], char string2[]);
 
 int main () {
-
     
     char newString = concatStrings("hello", "bye");
   
@@ -20,30 +19,30 @@ int stringLength(char inputString[]) {
         total += 1;
         ptr++;
     }
-
     return total;
 }
 
-char concatStrings(string1, string2) {
+char concatStrings(char string1[], char string2[]) {
 
     int length1 = stringLength(string1);
     int length2 = stringLength(string2);
     int totalLength = length1 + length2;
 
-    char newString[totalLength] = {}
-    int counter, index, count;
-    index = 0;
+    char newString[] = {};
+    int counter, count, counter1;
+    int index = 0;
 
-    for (counter = 0; counter < length1; counter++) {
+    for (counter = 0; counter < length1 - 1; counter++) {
         newString[index] = string1[counter];
         index++;
     }
 
-    for (counter1 = 0; counter1 < length2; counter1++) {
+    for (counter1 = 0; counter1 < length2 - 1; counter1++) {
         newString[index] = string2[counter1];
+        index++;
     }
 
-    for (count = 0; count < totalLength; count ++) {
+    for (count = 0; count < totalLength - 1; count ++) {
         printf("%c", newString[count]);
     }
 }
