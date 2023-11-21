@@ -82,7 +82,7 @@ int main() {
     while (fgets(line, buffer_size, input)) {   
         // first we will get the info from the line
         tokeniseRecord(line,",", pos, artist, title, year);
-        
+
         strcpy(songs[counter].artist, artist);
         strcpy(songs[counter].title, title);
         strcpy(songs[counter].year, year);
@@ -90,5 +90,6 @@ int main() {
         counter++;
     }
 
-    printf("%d\n", counter);
+    printf("%d\n", songs[0].position);
 }
+

@@ -1,15 +1,5 @@
 #include <stdio.h>
 
-
-char concatStrings(char string1[], char string2[]);
-
-int main () {
-    
-    char newString = concatStrings("hello", "bye");
-  
-    printf("The new string is, %c", newString);
-}
-
 int stringLength(char inputString[]) {
 
     int length, total = 0; 
@@ -25,7 +15,9 @@ int stringLength(char inputString[]) {
 char concatStrings(char string1[], char string2[]) {
 
     int length1 = stringLength(string1);
+    printf("%d",length1);
     int length2 = stringLength(string2);
+    printf("%d", length2);
     int totalLength = length1 + length2;
 
     char newString[] = {};
@@ -47,3 +39,11 @@ char concatStrings(char string1[], char string2[]) {
     }
 }
 
+
+
+int main () {
+    
+    char newString = concatStrings("hello", "bye");
+  
+    printf("The new string is, %c", newString);
+}
