@@ -9,6 +9,14 @@ void printArray(int a[][3] ){
      }
 }
 
+void changeElements(int a[][3]){
+     int j = 0;
+    for (size_t i = 0; i <= 2; i++){
+        array[][i] = j
+    }
+
+}
+
 int main() {
   int array1[2][3] = {{1, 2, 3}, {4, 5, 6}};
   printf("Values in array1 by row are:\n");
